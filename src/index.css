@@ -73,6 +73,7 @@ form{
 button{
   cursor: pointer;
 }
+
 .card{
   display: flex;
   justify-content: space-around;
@@ -81,6 +82,14 @@ button{
   width: 200px;
   padding: 0.5rem 0.5rem 0 0.5rem;
   border: 0.5px solid rgb(136, 136, 136);
+}
+
+#validacionFalsa p{
+  font-size: 15px;
+}
+
+#validacionVerdadera p{
+  font-size: 20px;
 }
 
 .card:hover{

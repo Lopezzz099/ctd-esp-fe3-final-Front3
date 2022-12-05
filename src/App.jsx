@@ -19,7 +19,7 @@ function App() {
           <Route path="/contact" element={ [<Navbar/> , <Contact/> , <Footer/>] }/>
           <Route path="/detail" element={ [<Navbar/> , <Detail/> , <Footer/>] }/>
           <Route path="/favs" element={ [<Navbar/> , <Favs/> , <Footer/>] }/>
-          <Route path="/home" element={ [<Navbar/> , <Home/> , <Footer/>] }/>
+          <Route path="/" element={ [<Navbar/> , <Home/> , <Footer/>] }/>
         </Routes>
       </div>
     </Router>
