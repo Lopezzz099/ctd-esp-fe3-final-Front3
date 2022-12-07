@@ -83,7 +83,9 @@ button{
   padding: 0.5rem 0.5rem 0 0.5rem;
   border: 0.5px solid rgb(136, 136, 136);
 }
-
+.odontologo{
+  width: 100%;
+}
 #validacionFalsa p{
   font-size: 15px;
 }
