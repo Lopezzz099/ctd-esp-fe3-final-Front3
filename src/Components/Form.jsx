@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useState } from "react";
+import { ContextGlobal } from "./utils/global.context";
 
 
 const Form = () => {
@@ -7,6 +8,9 @@ const Form = () => {
   const [nombreCompleto, cambiarNombreCompleto] = useState({campo: '', valido: null});
   const [email, cambiarEmail] = useState({campo: '', valido: null});
   const [formularioValido, cambiarFormularioValido] = useState(null);
+  const { theme } = useContext(ContextGlobal);
+  
+  const isDarkMode = theme === "dark" || false;
   const onChange = (e) =>{
     cambiarNombreCompleto({...nombreCompleto, campo: e.target.value})
   }
@@ -50,7 +54,7 @@ const Form = () => {
   }
   
   return (
-    <div>
+    <div >
       <form onSubmit={onSubmit}>
           <label htmlFor="nombreApellido"></label>
           <input 

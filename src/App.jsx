@@ -4,25 +4,37 @@ import Navbar from "./Components/Navbar";
 import {
   BrowserRouter as Router,
   Routes,
-  Route
+  Route,
+  Outlet,
+  useLocation,
+  useNavigate
 } from "react-router-dom";
 import Contact from "./Routes/Contact";
 import Detail from "./Routes/Detail";
 import Favs from "./Routes/Favs";
 import Home from "./Routes/Home";
+import { useContext, useEffect } from "react";
+import { ContextGlobal, ContextProvider } from "./Components/utils/global.context";
 
 function App() {
+  const location = useLocation();
+  const navigate = useNavigate();
+  const { theme } = useContext(ContextGlobal)
+  const isDarkMode = theme === "dark" || false
+
+  useEffect(() => {
+    if (location.pathname === '/') {
+      navigate("/home");
+    }
+  });
   return (
-    <Router>
-      <div className="App">
-        <Routes>
-          <Route path="/contact" element={ [<Navbar/> , <Contact/> , <Footer/>] }/>
-          <Route path="/dentist/:id" element={ [<Navbar/> , <Detail/> , <Footer/>] }/>
-          <Route path="/favs" element={ [<Navbar/> , <Favs/> , <Footer/>] }/>
-          <Route path="/" element={ [<Navbar/> , <Home/> , <Footer/>] }/>
-        </Routes>
-      </div>
-    </Router>
+    <div className={`app ${isDarkMode ? "dark" : "light"}`}>
+      <Navbar />
+      <main>
+        <Outlet />
+      </main>
+      <Footer />
+    </div>
   );
 }
 
