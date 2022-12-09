@@ -126,8 +126,16 @@ nav{
 
 }
 
+.icono{
+  width: 30px;
+  margin: 0px 10px;
+}
+
 main{
-  min-height: calc(100vh - 104px - 65px - 21.440px);
+  min-height: calc(100vh - 104px - 65px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .rutas{
@@ -149,13 +157,13 @@ a:hover{
 
 footer {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   text-align: center;
   padding: 2rem;
   position: relative;
   bottom: 0;
-
   height: 40px;
+  align-items: center;
 }
 
 footer > img{
@@ -180,7 +188,7 @@ button{
   cursor: pointer;
 }
 
-.card{
+/* .card1{
   display: flex;
   justify-content: space-around;
   flex-direction: column;
@@ -188,10 +196,13 @@ button{
   width: 200px;
   height: 378px;
   padding: 0.5rem 0.5rem 0 0.5rem;
-  border: 0.5px solid rgb(136, 136, 136);
-}
+  background-image: linear-gradient(163deg, #00ff75 0%, #3700ff 100%);
+  border-radius: 20px;
+  transition: all .3s;
+} */
 .odontologo{
   width: 100%;
+  border-radius: 20px;
 }
 #validacionFalsa p{
   font-size: 15px;
@@ -200,9 +211,35 @@ button{
 #validacionVerdadera p{
   font-size: 20px;
 }
+.card {
+  padding: 0.5rem 0.5rem 0 0.5rem;
+  width: 200px;
+  height: 378px;
+  background-image: linear-gradient(163deg, #00ff75 0%, #3700ff 100%);
+  border-radius: 20px;
+  transition: all .3s;
+}
 
-.card:hover{
-  border: 0.5px solid rgb(206, 217, 142);
+.card2 {
+  padding: 0.5rem 0.5rem 0 0.5rem;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  width: 200px;
+  height: 378px;
+  background-color: #eeeeee;
+  border-radius: 20px;
+  transition: all .2s;
+}
+
+.card2:hover {
+  transform: scale(0.98);
+  border-radius: 20px;
+}
+
+.card:hover {
+  box-shadow: 0px 0px 30px 1px rgba(0, 255, 117, 0.30);
 }
 
 .card-grid{
@@ -238,16 +275,14 @@ tr:nth-child(even) {
   background-color: #12121296;
   color: white;
 }
-.dark > a {
+.dark  a {
   color: white;
 }
 
-.cardDark{
-  background-color: #12121296;
-  color: white;
-}
+
 
 /* Boton de cambiar tema*/
+
 /* .toggleWrapper {
   position: absolute;
   top: 50%;

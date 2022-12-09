@@ -13,7 +13,7 @@ const Navbar = () => {
     else setDarkTheme();
   };
   return (
-    <nav className={`${ isDarkMode ? "dark" : "light" }`}>
+    <nav className={`nav ${ isDarkMode ? "dark" : "light" }`}>
       <p className='logo'><span className='D'>D</span>H Odonto</p>
       <div className='rutas'>
       <Link to={"/"}>

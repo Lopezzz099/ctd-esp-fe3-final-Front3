@@ -29,7 +29,8 @@ const Card = ({ name, username, id, objeto }) => {
     }
   }
   return (
-    <div className={`card ${isDarkMode ? "dark" : "light"}`}>
+    <div class="card">
+      <div className={`card2 ${isDarkMode ? "dark" : "light"}`}>
         {/* En cada card deberan mostrar en name - username y el id */}
         <img src="/images/doctor.jpg" alt="odontologo" class="odontologo"/>
         {/* No debes olvidar que la Card a su vez servira como Link hacia la pagina de detalle */}
@@ -38,6 +39,7 @@ const Card = ({ name, username, id, objeto }) => {
         {/* Ademas deberan integrar la logica para guardar cada Card en el localStorage */}
         
         <button onClick={() => addFav({ name, username, id })} className={clase}></button>
+      </div>
     </div>
   );
 };
