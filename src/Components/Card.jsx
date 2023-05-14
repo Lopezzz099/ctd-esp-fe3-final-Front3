@@ -21,18 +21,18 @@ const Card = ({ name, username, id, objeto }) => {
       doesExist ? favoritesParsed = filteredDentist : favoritesParsed.push(agregado)
       doesExist ? setClase('favButton') : setClase('xButton') 
       localStorage.setItem('dentistFav', JSON.stringify(favoritesParsed))
-      console.log(favoritesParsed)
+      // console.log(favoritesParsed)
       
     } else {
       localStorage.setItem('dentistFav', JSON.stringify([agregado]))
-      console.log("2")
+      // console.log("2")
     }
   }
   return (
-    <div class="card">
+    <div className="card">
       <div className={`card2 ${isDarkMode ? "dark" : "light"}`}>
         {/* En cada card deberan mostrar en name - username y el id */}
-        <img src="/images/doctor.jpg" alt="odontologo" class="odontologo"/>
+        <img src="/images/doctor.jpg" alt="odontologo" className="odontologo"/>
         {/* No debes olvidar que la Card a su vez servira como Link hacia la pagina de detalle */}
         <Link to={"/dentist/" + id}>{name}</Link>
         <p>{username}</p>

@@ -27,20 +27,20 @@ const Navbar = () => {
       </Link>
       
       {/*boton de cambiar tema*/}
-      <div class="toggleWrapper">
-        <input type="checkbox" class="dn" id="dn"></input>
-        <label for="dn" class="toggle"onClick={changeTheme}>
-        <span class="toggle__handler">
-            <span class="crater crater--1"></span>
-            <span class="crater crater--2"></span>
-            <span class="crater crater--3"></span>
+      <div className="toggleWrapper">
+        <input type="checkbox" className="dn" id="dn"></input>
+        <label htmlFor="dn" className="toggle"onClick={changeTheme}>
+        <span className="toggle__handler">
+            <span className="crater crater--1"></span>
+            <span className="crater crater--2"></span>
+            <span className="crater crater--3"></span>
         </span>
-        <span class="star star--1"></span>
-        <span class="star star--2"></span>
-        <span class="star star--3"></span>
-        <span class="star star--4"></span>
-        <span class="star star--5"></span>
-        <span class="star star--6"></span>
+        <span className="star star--1"></span>
+        <span className="star star--2"></span>
+        <span className="star star--3"></span>
+        <span className="star star--4"></span>
+        <span className="star star--5"></span>
+        <span className="star star--6"></span>
         </label>
       </div>
       </div>

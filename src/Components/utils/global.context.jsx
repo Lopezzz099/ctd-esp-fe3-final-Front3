@@ -21,7 +21,7 @@ export const ContextProvider = ({ children }) => {
     }),
     [state.theme]
   );
-  console.log(providerState)
+  // console.log(providerState)
   return (
     <ContextGlobal.Provider value={{theme: providerState.theme, setDarkTheme: providerState.setDarkTheme, setLightTheme: providerState.setLightTheme}}>
       {children}
